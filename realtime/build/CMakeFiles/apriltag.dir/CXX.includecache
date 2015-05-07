@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/austin/program/chromatags/realtime/apriltag.cpp
+stdio.h
+-
+stdint.h
+-
+inttypes.h
+-
+ctype.h
+-
+unistd.h
+-
+string
+-
+apriltag.h
+/Users/austin/program/chromatags/realtime/apriltag.h
+common/image_u8.h
+/Users/austin/program/chromatags/realtime/common/image_u8.h
+tag36h11.h
+/Users/austin/program/chromatags/realtime/tag36h11.h
+tag36h10.h
+/Users/austin/program/chromatags/realtime/tag36h10.h
+tag36artoolkit.h
+/Users/austin/program/chromatags/realtime/tag36artoolkit.h
+tag25h9.h
+/Users/austin/program/chromatags/realtime/tag25h9.h
+tag25h7.h
+/Users/austin/program/chromatags/realtime/tag25h7.h
+common/zarray.h
+/Users/austin/program/chromatags/realtime/common/zarray.h
+common/getopt.h
+/Users/austin/program/chromatags/realtime/common/getopt.h
+rgb2lab.hpp
+/Users/austin/program/chromatags/realtime/rgb2lab.hpp
+pnm2mat.hpp
+/Users/austin/program/chromatags/realtime/pnm2mat.hpp
+

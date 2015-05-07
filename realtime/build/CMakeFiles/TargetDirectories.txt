@@ -1,0 +1,2 @@
+/Users/austin/program/chromatags/realtime/build/CMakeFiles/apriltag.dir
+/Users/austin/program/chromatags/realtime/build/CMakeFiles/chromatag.dir
