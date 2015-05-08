@@ -2,15 +2,16 @@
   @Description: 
       Given an input matrix, duplicates and rotates image 180 degrees.
       Thereby enabling the encoding of an image twice for a more robust,
-      AprilTag.
+      AprilTag dubed ChromaTag.
 
   @Author: Austin Walters
   @Creation Date: 9/21/2014
-  @Last Modified: 9/21/2014
+  @Last Modified: 5/08/2015
   @Written in Python 2.7
 '''
 
 import sys
+import os
 from PIL import Image
 
 
@@ -26,7 +27,7 @@ from PIL import Image
 orange = (255,  125, 42)
 magenta = (200, 114, 239)
 lime = (82, 255, 0)
-teal = (23, 249, 255)
+teal = (25, 255, 255)
 
 black = (0, 0, 0)
 white = (255, 255, 255)
@@ -158,26 +159,33 @@ def printMatrix(matrix):
 '''
 def runTest(name, test):
 
+    if not os.path.exists('output/'):
+        os.makedirs('output')
+    if not os.path.exists('input/'):
+        os.makedirs('input')
+
     print '\n-- Beginning Test %s! --\n' % (name)
     print 'input matrix:'
     printMatrix(test)
     print 'Genearting Input Image...'
-    generateImage(name + '-input.png', generateBWMatrix(test))
-    print 'tuple matrix:'
-    printMatrix(encode(test))
-    print 'coded matrix:'
-    printMatrix(generateColorMatrix(encode(test)))
-    print 'tuple matrix:'
-    printMatrix(image2Matrix(generateColorMatrix(encode(test))))
-    print 'Generating Output Image...'
-    generateImage(name + '-output.png', generateColorMatrix(encode(test)))
+    inputName = 'input/' + name + '-april.png'
+    generateImage(inputName, generateBWMatrix(test))
+#    print 'tuple matrix:'
+#    printMatrix(encode(test))
+#    print 'coded matrix:'
+#    printMatrix(generateColorMatrix(encode(test)))
+#    print 'tuple matrix:'
+#    printMatrix(image2Matrix(generateColorMatrix(encode(test))))
+#    print 'Generating Output Image...'
+    outputName = os.getcwd() + '/output/' + name + '-chroma.png'
+    generateImage(outputName, generateColorMatrix(encode(test)))
 
-    if encode(test) == image2Matrix(generateColorMatrix(encode(test))):
-        print '\nOutput == Input!'
-        print 'Successfully, Completed Test %s!\n\n' % (name)
-    else:
-        print '\nOutput != Input!'
-        print 'Failed Test %s!\n\n' % (name)
+#    if encode(test) == image2Matrix(generateColorMatrix(encode(test))):
+#        print '\nOutput == Input!'
+#        print 'Successfully, Completed Test %s!\n\n' % (name)
+#    else:
+#        print '\nOutput != Input!'
+#        print 'Failed Test %s!\n\n' % (name)
 
 
 print '\n\n---- TESTING CODE -----\n\n'
@@ -197,7 +205,62 @@ apriltag36_11_12 = [[0,0,0,0,0,0,0,0,0,0],\
                     [0,1,1,0,1,0,0,1,1,0],\
                     [0,1,1,1,1,1,1,1,1,0],\
                     [0,0,0,0,0,0,0,0,0,0]]
+
 runTest('tag36_11_12', apriltag36_11_12)
+
+apriltag36_11_13 = [[0,0,0,0,0,0,0,0,0,0],\
+                    [0,1,1,1,1,1,1,1,1,0],\
+                    [0,1,0,1,1,1,0,1,1,0],\
+                    [0,1,1,1,0,1,0,0,1,0],\
+                    [0,1,0,1,0,0,1,0,1,0],\
+                    [0,1,0,0,1,1,1,1,1,0],\
+                    [0,1,0,1,1,1,1,0,1,0],\
+                    [0,1,0,0,0,0,0,1,1,0],\
+                    [0,1,1,1,1,1,1,1,1,0],\
+                    [0,0,0,0,0,0,0,0,0,0]]
+
+runTest('tag36_11_13', apriltag36_11_13)
+
+apriltag36_11_14 = [[0,0,0,0,0,0,0,0,0,0],\
+                    [0,1,1,1,1,1,1,1,1,0],\
+                    [0,1,0,0,1,1,0,1,1,0],\
+                    [0,1,0,1,1,0,1,0,1,0],\
+                    [0,1,1,1,0,1,0,0,1,0],\
+                    [0,1,1,1,0,1,1,0,1,0],\
+                    [0,1,0,0,0,0,1,1,1,0],\
+                    [0,1,0,1,1,0,1,0,1,0],\
+                    [0,1,1,1,1,1,1,1,1,0],\
+                    [0,0,0,0,0,0,0,0,0,0]]
+
+runTest('tag36_11_14', apriltag36_11_14)
+
+apriltag36_11_80 = [[0,0,0,0,0,0,0,0,0,0],\
+                    [0,1,1,1,1,1,1,1,1,0],\
+                    [0,1,1,0,0,1,0,1,1,0],\
+                    [0,1,0,0,0,0,1,0,1,0],\
+                    [0,1,1,1,1,1,0,1,1,0],\
+                    [0,1,1,0,0,1,1,1,1,0],\
+                    [0,1,0,1,1,1,1,1,1,0],\
+                    [0,1,1,0,1,0,1,1,1,0],\
+                    [0,1,1,1,1,1,1,1,1,0],\
+                    [0,0,0,0,0,0,0,0,0,0]]
+
+runTest('tag36_11_80', apriltag36_11_80)
+
+
+apriltag36_11_544= [[0,0,0,0,0,0,0,0,0,0],\
+                    [0,1,1,1,1,1,1,1,1,0],\
+                    [0,1,0,0,0,0,1,1,1,0],\
+                    [0,1,1,0,1,1,1,0,1,0],\
+                    [0,1,0,0,1,0,0,1,1,0],\
+                    [0,1,0,1,1,0,0,1,1,0],\
+                    [0,1,1,0,0,0,1,1,1,0],\
+                    [0,1,1,1,0,0,1,1,1,0],\
+                    [0,1,1,1,1,1,1,1,1,0],\
+                    [0,0,0,0,0,0,0,0,0,0]]
+
+runTest('tag36_11_544', apriltag36_11_544)
+
 
 test4 = []
 print 'Enter 6 rows, each row MUST contain 6 entries of 1s and 0s ONLY!'

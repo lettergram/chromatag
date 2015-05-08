@@ -3,8 +3,8 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
-#include "common/pnm.h"
-#include "common/image_u8.h"
+#include "../apriltags/common/pnm.h"
+#include "../apriltags/common/image_u8.h"
 
 using namespace std;
 using namespace cv;
