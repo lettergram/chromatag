@@ -19,7 +19,7 @@ $ ./apriltags_demo [options] input_image.pnm
 Options: 
 	 -d: Debug, displays image at every step
 
-####Involk Single Image: ChromaTags
+####Invoke Single Image: ChromaTags
 $ ./chromatags_demo [options] input_image.pnm
 
 Options: 
