@@ -4,20 +4,20 @@
 #include <ctype.h>
 #include <unistd.h>
 
-#include "apriltag.h"
-#include "common/image_u8.h"
-#include "tag36h11.h"
-#include "tag36h10.h"
-#include "tag36artoolkit.h"
-#include "tag25h9.h"
-#include "tag25h7.h"
+#include "apriltags/apriltag.h"
+#include "apriltags/common/image_u8.h"
+#include "apriltags/tag36h11.h"
+#include "apriltags/tag36h10.h"
+#include "apriltags/tag36artoolkit.h"
+#include "apriltags/tag25h9.h"
+#include "apriltags/tag25h7.h"
 
-#include "common/zarray.h"
-#include "common/getopt.h"
+#include "apriltags/common/zarray.h"
+#include "apriltags/common/getopt.h"
 
 // Our extensions for chromatags
-#include "rgb2lab.hpp" // functions to convert to rgb to lab, and seperate color channels
-#include "pnm2mat.hpp" // functions to convert pnm to and from mat
+#include "lib/rgb2lab.hpp" // functions to convert to rgb to lab, and seperate color channels
+#include "lib/pnm2mat.hpp" // functions to convert pnm to and from mat
 
 int main(){
 
@@ -81,9 +81,9 @@ int main(){
     }
     //frame = RGB2YUV(frame);                                 // Just for comparison
     frame = RGB2LAB(frame);                                   // Returns lab space
-    frame = betaLAB(frame);                                  // Look at only a channel
+    frame = alphaLAB(frame);                                  // Look at only a channel
 
-    resize(frame,src,src.size());
+    // resize(frame,src,src.size());
     
     if(showGradient){
       src = gradientEdges(src);                               // Show gradient for fun

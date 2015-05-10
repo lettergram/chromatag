@@ -1,6 +1,7 @@
 CC = gcc
 AR = ar
 MV = mv
+CP = cp
 
 CFLAGS = -std=gnu99 -Wall -Wno-unused-parameter -Wno-unused-function -pthread -I. -Icommon -O1
 LDFLAGS = -lpthread -lm
@@ -26,6 +27,7 @@ apriltag_demo: apriltag_demo.o
 
 move:           
 	$(MV) apriltag_demo ../
+	$(MV) libapriltag.a ../
 
 clean:
 	@rm -rf *.o common/*.o $(LIBAPRILTAG) apriltag_demo

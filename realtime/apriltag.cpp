@@ -56,7 +56,7 @@
 
 int main(){
   
-  bool showGradient = true;
+  bool showGradient = false;
   bool found = false;
 
   VideoCapture cap(0); // open the default camera
