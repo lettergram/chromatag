@@ -53,48 +53,13 @@ CMAKE_SOURCE_DIR = /Users/austin/program/chromatags/realtime
 CMAKE_BINARY_DIR = /Users/austin/program/chromatags/realtime/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/apriltag.dir
-
-# All Build rule for target.
-CMakeFiles/apriltag.dir/all:
-	$(MAKE) -f CMakeFiles/apriltag.dir/build.make CMakeFiles/apriltag.dir/depend
-	$(MAKE) -f CMakeFiles/apriltag.dir/build.make CMakeFiles/apriltag.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/austin/program/chromatags/realtime/build/CMakeFiles  1
-	@echo "Built target apriltag"
-.PHONY : CMakeFiles/apriltag.dir/all
-
-# Include target in all.
-all: CMakeFiles/apriltag.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/apriltag.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/austin/program/chromatags/realtime/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/apriltag.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/austin/program/chromatags/realtime/build/CMakeFiles 0
-.PHONY : CMakeFiles/apriltag.dir/rule
-
-# Convenience name for target.
-apriltag: CMakeFiles/apriltag.dir/rule
-.PHONY : apriltag
-
-# clean rule for target.
-CMakeFiles/apriltag.dir/clean:
-	$(MAKE) -f CMakeFiles/apriltag.dir/build.make CMakeFiles/apriltag.dir/clean
-.PHONY : CMakeFiles/apriltag.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/apriltag.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/chromatag.dir
 
 # All Build rule for target.
 CMakeFiles/chromatag.dir/all:
 	$(MAKE) -f CMakeFiles/chromatag.dir/build.make CMakeFiles/chromatag.dir/depend
 	$(MAKE) -f CMakeFiles/chromatag.dir/build.make CMakeFiles/chromatag.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/austin/program/chromatags/realtime/build/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/austin/program/chromatags/realtime/build/CMakeFiles  1
 	@echo "Built target chromatag"
 .PHONY : CMakeFiles/chromatag.dir/all
 

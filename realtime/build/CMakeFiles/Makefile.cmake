@@ -71,6 +71,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/apriltag.dir/DependInfo.cmake"
   "CMakeFiles/chromatag.dir/DependInfo.cmake"
   )

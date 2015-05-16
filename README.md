@@ -8,7 +8,7 @@ It's possible to determine the position based a method called [homography](http:
 Our implementation takes most of the code from the origional [Apriltags website](http://april.eecs.umich.edu/wiki/index.php/AprilTags), however we make it run in real time. ChromaTags takes advantage of colors, as opposed to simply black and white images, explained more here.
 
 ### To Build:  
-1. `chromatags/realtime $ make`  
+1. `chromatags/comparison $ make`  
 2. `mkdir build && cd build`  
 3. `cmake .. && make`  
 
@@ -27,7 +27,7 @@ Options:
 
 ####Invoke Realtime Tracking
 
-$ cd realtime/build/
+$ cd comparison/build/
 
 $ ./chromatag
 

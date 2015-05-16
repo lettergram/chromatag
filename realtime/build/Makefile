@@ -103,19 +103,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named apriltag
-
-# Build rule for target.
-apriltag: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 apriltag
-.PHONY : apriltag
-
-# fast build rule for target.
-apriltag/fast:
-	$(MAKE) -f CMakeFiles/apriltag.dir/build.make CMakeFiles/apriltag.dir/build
-.PHONY : apriltag/fast
-
-#=============================================================================
 # Target rules for targets named chromatag
 
 # Build rule for target.
@@ -127,30 +114,6 @@ chromatag: cmake_check_build_system
 chromatag/fast:
 	$(MAKE) -f CMakeFiles/chromatag.dir/build.make CMakeFiles/chromatag.dir/build
 .PHONY : chromatag/fast
-
-apriltag.o: apriltag.cpp.o
-.PHONY : apriltag.o
-
-# target to build an object file
-apriltag.cpp.o:
-	$(MAKE) -f CMakeFiles/apriltag.dir/build.make CMakeFiles/apriltag.dir/apriltag.cpp.o
-.PHONY : apriltag.cpp.o
-
-apriltag.i: apriltag.cpp.i
-.PHONY : apriltag.i
-
-# target to preprocess a source file
-apriltag.cpp.i:
-	$(MAKE) -f CMakeFiles/apriltag.dir/build.make CMakeFiles/apriltag.dir/apriltag.cpp.i
-.PHONY : apriltag.cpp.i
-
-apriltag.s: apriltag.cpp.s
-.PHONY : apriltag.s
-
-# target to generate assembly for a file
-apriltag.cpp.s:
-	$(MAKE) -f CMakeFiles/apriltag.dir/build.make CMakeFiles/apriltag.dir/apriltag.cpp.s
-.PHONY : apriltag.cpp.s
 
 chromatag.o: chromatag.cpp.o
 .PHONY : chromatag.o
@@ -182,13 +145,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... apriltag"
 	@echo "... chromatag"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... apriltag.o"
-	@echo "... apriltag.i"
-	@echo "... apriltag.s"
 	@echo "... chromatag.o"
 	@echo "... chromatag.i"
 	@echo "... chromatag.s"
